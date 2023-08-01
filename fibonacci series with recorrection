@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void fibonacciSeries(int n) {
+    int num1 = 0, num2 = 1, nextTerm;
+    printf("Fibonacci Series up to %d:\n", n);
+    printf("%d, %d, ", num1, num2);
+
+    for (int i = 2; i < n; i++) {
+        nextTerm = num1 + num2;
+        printf("%d, ", nextTerm);
+        num1 = num2;
+        num2 = nextTerm;
+    }
+
+    printf("\n");
+}
+
+int main() {
+    int limit;
+    printf("Enter the limit to generate the Fibonacci series: ");
+    scanf("%d", &limit);
+
+    fibonacciSeries(limit);
+
+    return 0;
+}
+
